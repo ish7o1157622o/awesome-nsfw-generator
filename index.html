@@ -2,29 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NSFW Gallery</title>
+  <title>NSFW Web Gallery</title>
   <style>
-    body { background: #111; color: white; font-family: sans-serif; }
-    .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-    .gallery img, .gallery video {
-      width: 200px;
+    body {
+      background: #121212;
+      color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff4a85;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
       height: auto;
       border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>NSFW AI Gallery</h1>
+  <h1>NSFW Image Gallery</h1>
   <div class="gallery">
-    <img src="gallery/image2.jpeg" alt="Image">
-    <img src="gallery/download (95).jpeg" alt="Image">
-    <img src="gallery/download - 2025-04-21T154020.699.jpeg" alt="Image">
-    <video controls>
-      <source src="gallery/360motion.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <!-- Add more <img> and <video> as needed -->
-  </div>
-</body>
-</html>
-
+    <img src="download (3).webp" alt="image">
+    <img src="assets_task_01jt6ajmvvep
