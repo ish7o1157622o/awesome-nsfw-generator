@@ -20,19 +20,79 @@
       gap: 12px;
       padding: 20px;
     }
-    .gallery img {
+    .item {
+      background: #1e1e1e;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .item img {
       width: 100%;
       height: auto;
       border-radius: 10px;
       transition: transform 0.3s;
     }
-    .gallery img:hover {
+    .item img:hover {
       transform: scale(1.05);
+    }
+    .item a {
+      display: inline-block;
+      margin-top: 8px;
+      color: #ff4a85;
+      text-decoration: none;
+    }
+    .item a:hover {
+      text-decoration: underline;
+    }
+    .ad-section {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #333;
+      color: #ff4a85;
+    }
+    .download-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff4a85;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .download-btn:hover {
+      background-color: #ff0066;
     }
   </style>
 </head>
 <body>
   <h1>NSFW Image Gallery</h1>
   <div class="gallery">
-    <img src="download (3).webp" alt="image">
-    <img src="assets_task_01jt6ajmvvep
+    <div class="item">
+      <img src="download (3).webp" alt="Image 1">
+      <a href="download (3).webp" download>Download</a>
+    </div>
+    <div class="item">
+      <img src="assets_task_01jt6ajmvvep8bptaakkwzfv81_1746116659_img_0.webp" alt="Image 2">
+      <a href="assets_task_01jt6ajmvvep8bptaakkwzfv81_1746116659_img_0.webp" download>Download</a>
+    </div>
+    <!-- Repeat more <div class="item"> blocks for other images -->
+  </div>
+
+  <div class="ad-section">
+    <h2>Advertisement</h2>
+    <p>Check out this amazing offer!</p>
+    <a href="https://www.example-ad-link.com" target="_blank">Click here for more</a>
+  </div>
+
+  <button class="download-btn" onclick="downloadPage()">Download Page</button>
+
+  <script>
+    function downloadPage() {
+      const blob = new Blob([document.documentElement.outerHTML], {type: 'text/html'});
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'gallery_page.html';
+      link.click();
+    }
+  </script>
+</body>
+</html>
